@@ -1,0 +1,13 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: mdp-redis
+    ports:
+      - "6379:6379"
+
+  activemq:
+    image: apache/activemq-classic:5.18.3
+    container_name: mdp-activemq
+    ports:
+      - "61616:61616"
+      - "8161:8161"
